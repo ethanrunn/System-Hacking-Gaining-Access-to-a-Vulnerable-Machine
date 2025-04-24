@@ -16,9 +16,21 @@ This ethical hacking project simulates a real-world exploitation scenario where 
 
 ## 🛰️ Scanning and Enumeration
 
+**General nmap scan (to feel around)**
 ```bash
-nmap -sV <target-IP>
+nmap <target-IP>
 ```
+
+![Nmap Scan](images/nmap-scan.png)
+
+**Detailed nmap scan to see services and versions**
+```bash
+nmap -A -sV <target-IP>
+```
+
+![Nmap Scan2](images/nmap-version-scan1.png)
+![Nmap Scan2](images/nmap-version-scan2.png)
+![Nmap Scan2](images/nmap-version-scan3.png)
 
 - Discovered open port: `21/tcp` (FTP)
 - Service detected: `vsFTPd 2.3.4` — a known vulnerable service with a backdoor.
