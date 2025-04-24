@@ -116,9 +116,14 @@ run
 | Difficulty identifying active sessions | Used `sessions -i <id>` instead of `sessions` |
 | Command confusion between shell and Meterpreter | Ensured proper shell upgrade and command context awareness |
 
-**Meterpreter Upgrade**
+**The error when I tried to use the `upload` command**
 
-![Meterpreter](images/meterpreter-upgrade.png)
+![Upload error](images/upload-error.png)
+
+
+**Meterpreter Upgrade that resolved the error**
+
+![Meterpreter Upgrade](images/meterpreter-upgrade.png)
 
 
 ---
