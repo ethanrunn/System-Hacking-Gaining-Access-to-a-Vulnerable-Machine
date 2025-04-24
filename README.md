@@ -73,7 +73,7 @@ run
 ![Exploit](images/verify-root-access.png)
 
 
-- Navigated file system, listed directories
+- Navigated the file system, listed directories
 
 ![Exploit](images/file-navigation.png)
 
@@ -83,7 +83,7 @@ run
 ![Exploit](images/upload1.png)
 
 
-- Downloaded victim's files back to Kali using the `download` command
+- Downloaded the victim's files back to Kali using the `download` command
 
 ![Exploit](images/download1.png)
 ![Exploit](images/download2.png)
@@ -120,8 +120,5 @@ To prevent exploitation of similar vulnerabilities in a production environment:
 - Regularly scan systems for known vulnerabilities.
 
 ---
-
-## 🧠 Author
-Francis Uramah
 
 Date created: 24/04/2025
