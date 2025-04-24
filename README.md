@@ -72,15 +72,21 @@ run
 
 ![Exploit](images/verify-root-access.png)
 
+
 - Navigated file system, listed directories
 
 ![Exploit](images/file-navigation.png)
 
-- Transferred files from attacker to victim using Meterpreter `upload` command
+
+- Transferred files from attacker to victim using the Meterpreter `upload` command
 
 ![Exploit](images/upload1.png)
 
-- Downloaded victim's files back to Kali using `download` command
+
+- Downloaded victim's files back to Kali using the `download` command
+
+![Exploit](images/download1.png)
+![Exploit](images/download2.png)
 
 ---
 
