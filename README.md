@@ -39,7 +39,11 @@ nmap -A -sV <target-IP>
 
 ## 💣 Exploitation Process
 
-**1) Exploit Module Used:**
+**1) Launch Metasploit:**
+
+![Launch Exploit](images/metasploit-launch.png)
+
+**2) Exploit Module Used:**
 
 ```
 exploit/unix/ftp/vsftpd_234_backdoor
@@ -48,7 +52,7 @@ exploit/unix/ftp/vsftpd_234_backdoor
 ![Search Exploit](images/search-exploit.png)
 
 
-**2) Metasploit Commands:**
+**3) Metasploit Commands:**
 
 ```bash
 use exploit/unix/ftp/vsftpd_234_backdoor
@@ -77,6 +81,18 @@ run
 
 ![Exploit](images/file-navigation.png)
 
+- Display content of privileged directories like `/etc/passwd` and `/etc/shadow`
+
+![Password hashes](images/passwd-hashes.png)
+![Shadow hashes](images/shadow-hashes.png)
+
+
+- More proof that I'm in
+
+![msfadmininfo](images/msfadmin-info.png)
+![Exploit](images/post-exploit1.png)
+![Exploit](images/post-exploit2.png)
+
 
 - Transferred files from attacker to victim using the Meterpreter `upload` command
 
@@ -99,6 +115,11 @@ run
 | Upload error in normal shell | Upgraded to Meterpreter for advanced file interaction |
 | Difficulty identifying active sessions | Used `sessions -i <id>` instead of `sessions` |
 | Command confusion between shell and Meterpreter | Ensured proper shell upgrade and command context awareness |
+
+**Meterpreter Upgrade**
+
+![Meterpreter](images/meterpreter-upgrade.png)
+
 
 ---
 
